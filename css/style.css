@@ -1,61 +1,3 @@
-/* body{
-    background: var(--Primary-gradient);
-}
-
-
-.nav-link{
-    color: var(--Primary);
-}
-.nav-link:hover{
-    color: var(--Primary-dark);
-}
-.nav-link.active{
-    color: var(--Secondary-dark);
-}
-.navbar-nav .dropdown-menu {
-    left: unset;
-    right: 0;
-}
-.dropdown-item{
-    color: var(--Primary);
-}
-.dropdown-item:hover{
-    color: var(--Primary);
-    background-color: var(--Primary-extra-light);
-}
-.mainContent{
-    padding: 100px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.projectsArea{
-    padding: 50px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.projectsArea .card{
-    margin-top: 30px;
-}
-.projectsArea .card a{
-    display: block;
-}
-.projectCard{
-    height: 128px;
-    object-fit: contain;
-    padding: 20px;
-    background-color: var(--Secondary-extra-light);
-}
-
-footer{
-    margin-top: 100px;
-    padding: 30px;
-    text-align: center;
-    background: var(--Primary-gradient-rev);
-}
- */
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -68,7 +10,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1400px;
+    width: var(--container-width);
     margin: auto;
  }
 
@@ -98,7 +40,7 @@ body{
 
  .heroContainer{
     margin: auto;
-    width: 1400px;
+    width: var(--container-width);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +67,7 @@ body{
  }
 
  .projects{
-    width: 1400px;
+    width: var(--container-width);
     margin: auto;
     margin-top: 60px;
  }
@@ -189,9 +131,8 @@ body{
     margin-top: 60px;
  }
  .footerContainer{
-    width: 1400px;
+    width: var(--container-width);
     margin: auto;
-    padding: 30px;
     text-align: center;
  }
  .footerTitle{
@@ -215,3 +156,42 @@ body{
     margin-bottom: 0;
     margin-top: 0.75rem;
  }
+
+
+ @media all and (max-width: 1400px) {
+   .heroImage {
+      width: 20%;
+  }
+  .heroContent {
+      width: 60%;
+   }
+}
+
+@media all and (max-width: 1200px) {
+   .heroImage {
+      padding: 20px;
+  }
+}
+
+@media all and (max-width: 992px) {
+   .heroImage {
+      width: 20%;
+  }
+  .heroContent {
+      width: 80%;
+   }
+}
+@media all and (max-width: 768px) {
+   .heroContainer{
+      flex-direction: column;
+   }
+   .heroTitle{
+      text-align: center;
+   }
+   .heroImage {
+      width: 40%;
+  }
+  .heroContent {
+      width: 100%;
+   }
+}
