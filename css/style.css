@@ -34,6 +34,10 @@ body{
     color: var(--Secondary-dark);
  }
 
+.mobileMenu{
+   display: none;
+}
+
  section.hero{
     background: var(--Primary-gradient);
  }
@@ -180,6 +184,12 @@ body{
   .heroContent {
       width: 80%;
    }
+   .projectContainer{
+      flex-wrap: wrap;
+   }
+   .projectCard{
+      width: 48%;
+   }
 }
 @media all and (max-width: 768px) {
    .heroContainer{
@@ -193,5 +203,20 @@ body{
   }
   .heroContent {
       width: 100%;
+   }
+   .projectCard{
+      width: 100%;
+   }
+}
+
+@media all and (max-width: 576px) {
+   .mobileMenu {
+      display: block;
+   }
+   ul.nav{
+      display: none;
+   }
+   .topNave{
+      padding: 20px 0;
    }
 }
